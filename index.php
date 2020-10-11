@@ -26,7 +26,7 @@ function site_url($echome = false)
 
 function url_path($getArr = false)
 {
-    $k = htmlspecialchars(server_info("REQUEST_URI"));
+    $k = htmlspecialchars(filter_input(INPUT_SERVER,'REQUEST_URI'));
     $k_arr = explode('/', $k);
     return $getArr ? $k_arr : $k;
 }
@@ -35,8 +35,8 @@ function load_route($client)
 {
     global $routes;
     $urlparts = url_path(true);
-    $len = sizeof($urlparts);
-    $routeIndex = array_search('/' . $urlparts[1], $routes);
+    $len = count($urlparts);
+    $routeIndex = array_search('/' . ($len>0?$urlparts[1]:''), $routes);
     if ($routeIndex !== FALSE) {
         $routePath = $routes[$routeIndex];
         $intended_file = "./routes" . $routePath . ".php";
@@ -47,6 +47,8 @@ function load_route($client)
             }
             require_once($intended_file);
         }
+    }else{
+        die('No route found!');
     }
 }
 
