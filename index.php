@@ -1,5 +1,6 @@
 <?php
-require_once('./vendor/autoload.php');
+require_once 'utils.php';
+require_once './vendor/autoload.php';
 
 $appConfig = [
     'hostname' => "localhost:5000"
@@ -12,9 +13,7 @@ $routes = [
 
 use PayPay\OpenPaymentAPI\Client;
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: *");
-if ($_SERVER["REQUEST_METHOD"] === 'OPTIONS') {
+if (server_info('REQUEST_METHOD') === 'OPTIONS') {
     http_response_code(204);
     exit(0);
 }
@@ -24,14 +23,14 @@ function site_url($echome = false)
     $host = $appConfig['hostname'];
     $host = htmlspecialchars($host);
     if ($echome) {
-        echo $host . '/';
+        print_r( $host . '/');
     }
     return ('http://' . $host . '/');
 }
 
 function url_path($getArr = false)
 {
-    $k = htmlspecialchars($_SERVER['REQUEST_URI']);
+    $k = htmlspecialchars(server_info("REQUEST_URI"));
     $k_arr = explode('/', $k);
     return $getArr ? $k_arr : $k;
 }
@@ -47,7 +46,7 @@ function load_route($client)
         $intended_file = "./routes" . $routePath . ".php";
         $urlparam = '';
         if (file_exists($intended_file)) {
-            if ($urlparts[2] && $urlparts[2] != '') {
+            if (isset($urlparts[2] )&&$urlparts[2] && $urlparts[2] != '') {
                 $urlparam = $urlparts[2];
             }
             require_once($intended_file);

@@ -63,4 +63,4 @@ $cakes = [
     ],
 ];
 header('Content-Type: application/json');
-echo json_encode($cakes);
+print_r(json_encode($cakes));

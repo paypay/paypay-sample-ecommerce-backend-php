@@ -23,11 +23,11 @@ foreach ($req['orderItems'] as $key => $item) {
 }
 $mpid = $payload->getMerchantPaymentId();
 $payload->setOrderItems($orderItems)->setRequestedAt();
-$payload->setRedirectType('WEB_LINK')->setRedirectUrl($_SERVER["HTTP_ORIGIN"] . "/orderpayment/$mpid");
+$payload->setRedirectType('WEB_LINK')->setRedirectUrl("http://merchant.com". "/orderpayment/$mpid");
 try {
     $resp = $client->code->createQRCode($payload);
     header('Content-Type: application/json');
-    echo json_encode($resp);
+    print_r(json_encode($resp));
 } catch (Exception $e) {
     http_response_code($e->getCode());
     $response = [
