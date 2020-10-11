@@ -48,7 +48,7 @@ function load_route($client)
             require_once($intended_file);
         }
     }else{
-        die('No route found!');
+        print_r('No route found!');
     }
 }
 
