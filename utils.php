@@ -1,6 +1,5 @@
 <?php
 
 function server_info($field){
-    $serverInfo = $_SERVER;
-    return $serverInfo[$field];
+   filter_input(INPUT_SERVER,$field);
 }
