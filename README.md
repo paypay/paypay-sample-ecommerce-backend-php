@@ -5,8 +5,7 @@ This is a PHP based implementation of PayPay's SDK. For the demonstration purpos
 ## Install Requirements
 
 ```sh
-$ cd server/php
-$ composer install
+composer install
 ```
 ## Add API Keys to environment
 
