@@ -1,0 +1,11 @@
+{
+    "name": "PayPay Sample eCommerce PHP Backend",
+    "description": "A barebones PHP app to ",
+    "repository": "https://github.com/paypay/paypay-sample-ecommerce-backend-php",
+    "logo": "https://www.php.net/images/logos/new-php-logo.png",
+    "keywords": [
+        "paypay",
+        "php",
+        "paypay sample applications"
+    ]
+}

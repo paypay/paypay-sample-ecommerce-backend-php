@@ -19,6 +19,10 @@ export MERCHID="REPLACE_WITH_YOUR_MERCHANT_ID"
 
 ## Run local PHP server
 ```sh
-$ php -S localhost:5000
+cd src
+php -S localhost:5000
 ```
 You should now have the API server running on http://localhost:5000
+
+## Run on Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
