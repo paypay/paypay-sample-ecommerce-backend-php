@@ -1,3 +1,4 @@
 vendor/*
 .vscode/launch.json
 composer.lock
+build/*

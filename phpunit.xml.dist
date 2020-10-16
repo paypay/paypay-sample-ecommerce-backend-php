@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" colors="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+<phpunit 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+colors="true" 
+xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+bootstrap="./bootstraptest.php"
+>
   <coverage processUncoveredFiles="true">
     <include>
       <directory suffix=".php">src</directory>
@@ -12,6 +17,9 @@
   <testsuites>
     <testsuite name="App Test">
       <file> tests/AppTest.php</file>
-    </testsuite>   
+    </testsuite>
+    <testsuite name="Housekeeping">
+            <file> tests/ZCleanupTest.php</file>
+        </testsuite>   
   </testsuites>
 </phpunit>
