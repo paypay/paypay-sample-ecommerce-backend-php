@@ -9,9 +9,9 @@ class AppTest extends TestCase
     {
         $client = new Client(
             [
-                'API_KEY' => getenv('API_KEY'),
-                'API_SECRET' => getenv('API_SECRET'),
-                'MERCHANT_ID' => getenv('MERCHID')
+                'API_KEY' => '',
+                'API_SECRET' => '',
+                'MERCHANT_ID' => ''
             ],
             'test' //set to true for production mode
         );

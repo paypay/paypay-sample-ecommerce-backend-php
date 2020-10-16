@@ -14,8 +14,6 @@ export API_KEY="REPLACE_WITH_YOUR_API_KEY"
 export API_SECRET="REPLACE_WITH_YOUR_SECRET_KEY" 
 export MERCHID="REPLACE_WITH_YOUR_MERCHANT_ID"
 ```
-
-
 ## Run local PHP server
 ```sh
 cd src

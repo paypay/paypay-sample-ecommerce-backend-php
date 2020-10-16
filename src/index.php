@@ -4,6 +4,7 @@ require_once './vendor/autoload.php';
 use PayPay\OpenPaymentAPI\Client;
 use PayPay\OpenPaymentAPI\Models\CreateQrCodePayload;
 use PayPay\OpenPaymentAPI\Models\OrderItem;
+
 $appConfig = [
     'hostname' => "localhost:5000"
 ];
@@ -27,9 +28,9 @@ class CakeshopService
 
     function url_path($getArr = false)
     {
-        $k = htmlspecialchars(filter_input(INPUT_SERVER, 'REQUEST_URI'));
-        $k_arr = explode('/', $k);
-        return $getArr ? $k_arr : $k;
+        $path_data = htmlspecialchars(filter_input(INPUT_SERVER, 'REQUEST_URI'));
+        $path_data_arr = explode('/', $path_data);
+        return $getArr ? $path_data_arr : $path_data;
     }
 
     function load_route($client)
@@ -42,12 +43,11 @@ class CakeshopService
         $routeIndex = array_search('/' . ($len > 1 ? $urlparts[1] : ''), $routes);
         if ($routeIndex !== FALSE) {
             $routePath = $routes[$routeIndex];
-            $intended_file = "./src/routes" . $routePath . ".php";
             $urlparam = '';
             if (isset($urlparts[2]) && $urlparts[2] && $urlparts[2] != '') {
                 $urlparam = $urlparts[2];
             }
-            
+
             $route = new Routes($client, $urlparam);
             switch ($routePath) {
                 case $routes[0]:
@@ -60,13 +60,12 @@ class CakeshopService
                 case $routes[2]:
                     $route->orderStatus($urlparam);
                     break;
-                
+
 
                 default:
                     # code...
                     break;
             }
-            
         } else {
             print_r('No route found!');
         }
@@ -151,7 +150,7 @@ class Routes
     }
     function createQr($json)
     {
-        
+
         $req = json_decode($json, true);
 
         $payload = new CreateQrCodePayload();
@@ -174,7 +173,7 @@ class Routes
         $payload->setRedirectType('WEB_LINK')->setRedirectUrl("http://merchant.com" . "/orderpayment/$mpid");
         try {
             $resp = $this->client->code->createQRCode($payload);
-            $output =json_encode($resp);
+            $output = json_encode($resp);
             print_r($output);
             return $output;
         } catch (Exception $e) {
@@ -195,5 +194,3 @@ class Routes
         return $resp;
     }
 }
-
-
