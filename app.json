@@ -7,5 +7,24 @@
         "paypay",
         "php",
         "paypay sample applications"
-    ]
+    ],
+    "env": {
+        "API_KEY": {
+          "description": "PayPay API Key",
+          "value": ""
+        },
+        "API_SECRET": {
+          "description": "PayPay API Secret",
+          "value": ""
+        },
+        "MERCHANT_ID": {
+          "description": "Frontend Path of your store",
+          "value": "https://{YOUR-APP}.herokuapp.com/orderpayment"
+        },
+        "REDIRECT_PATH": {
+          "description": "Frontend Path of your store",
+          "value": "https://{YOUR-APP}.herokuapp.com/orderpayment"
+        }
+      }
+
 }
