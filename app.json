@@ -1,0 +1,30 @@
+{
+    "name": "PayPay Sample eCommerce PHP Backend",
+    "description": "This is a PHP based implementation of PayPay's SDK. For the demonstration purpose we have used a simple PHP server with polling library to create QR code link and to check the order status of a QR code ",
+    "repository": "https://github.com/paypay/paypay-sample-ecommerce-backend-php",
+    "logo": "https://www.php.net/images/logos/new-php-logo.png",
+    "keywords": [
+        "paypay",
+        "php",
+        "paypay sample applications"
+    ],
+    "env": {
+        "API_KEY": {
+          "description": "PayPay API Key",
+          "value": ""
+        },
+        "API_SECRET": {
+          "description": "PayPay API Secret",
+          "value": ""
+        },
+        "MERCHANT_ID": {
+          "description": "Frontend Path of your store",
+          "value": "https://{YOUR-APP}.herokuapp.com/orderpayment"
+        },
+        "REDIRECT_PATH": {
+          "description": "Frontend Path of your store",
+          "value": "https://{YOUR-APP}.herokuapp.com/orderpayment"
+        }
+      }
+
+}

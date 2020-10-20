@@ -1,0 +1,7 @@
+parameters:
+    bootstrapFiles:
+        - src/loader.php
+    level: 8
+    paths:
+        - src
+    checkMissingIterableValueType: false 
