@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbba98378573f57d1b1ea08836335b34",
+    "content-hash": "aef1dade0edf0102a7b726081c5ccf37",
     "packages": [
         {
             "name": "atoum/atoum",
@@ -537,16 +537,16 @@
         },
         {
             "name": "paypayopa/php-sdk",
-            "version": "0.8.0",
+            "version": "0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paypay/paypayopa-sdk-php.git",
-                "reference": "442340893a40d212a1c57add8d2092ae53f48795"
+                "reference": "c5190490cd9e46f1b0b99b3beb54b432185a3e4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paypay/paypayopa-sdk-php/zipball/442340893a40d212a1c57add8d2092ae53f48795",
-                "reference": "442340893a40d212a1c57add8d2092ae53f48795",
+                "url": "https://api.github.com/repos/paypay/paypayopa-sdk-php/zipball/c5190490cd9e46f1b0b99b3beb54b432185a3e4f",
+                "reference": "c5190490cd9e46f1b0b99b3beb54b432185a3e4f",
                 "shasum": ""
             },
             "require": {
@@ -586,7 +586,7 @@
                 "qr",
                 "qrcode"
             ],
-            "time": "2020-10-20T03:34:46+00:00"
+            "time": "2020-11-04T11:02:27+00:00"
         },
         {
             "name": "phar-io/manifest",
