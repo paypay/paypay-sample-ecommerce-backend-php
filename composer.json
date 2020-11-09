@@ -1,6 +1,6 @@
 {
     "require": {
-        "paypayopa/php-sdk": "^0.8.0",
+        "paypayopa/php-sdk": "^0.9.0",
         "phpstan/phpstan": "^0.12.49",
         "phpunit/phpunit": "^9.4",
         "php-coveralls/php-coveralls": "^2.4"
