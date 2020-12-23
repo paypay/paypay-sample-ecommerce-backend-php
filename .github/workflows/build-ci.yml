@@ -16,6 +16,9 @@ jobs:
 
       - name: Run composer
         run: composer install
+      
+      - name: Run composer update
+        run: composer update
 
       - name: Before script
         run: |
