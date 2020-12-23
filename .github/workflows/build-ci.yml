@@ -1,4 +1,4 @@
-name: Paypay PHP SDK CI
+name: Paypay PHP Sample ecommerce backend CI
 on: [push]
 
 jobs:
