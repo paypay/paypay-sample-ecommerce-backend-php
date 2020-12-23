@@ -1,1 +1,1 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":155:{a:2:{s:7:"defects";a:1:{s:17:"AppTest::testMain";i:4;}s:5:"times";a:2:{s:17:"AppTest::testMain";d:0.083;s:33:"ZCleanupTest::testShutdown_server";d:0.005;}}}
+C:37:"PHPUnit\Runner\DefaultTestResultCache":155:{a:2:{s:7:"defects";a:1:{s:17:"AppTest::testMain";i:4;}s:5:"times";a:2:{s:17:"AppTest::testMain";d:0.097;s:33:"ZCleanupTest::testShutdown_server";d:0.005;}}}
