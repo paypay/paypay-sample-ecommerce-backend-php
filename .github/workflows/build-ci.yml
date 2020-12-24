@@ -16,6 +16,9 @@ jobs:
 
       - name: Run composer
         run: composer install
+      
+      - name: composer update
+        run: composer update --lock
 
       - name: Before script
         run: |
