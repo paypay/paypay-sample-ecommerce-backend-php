@@ -1,5 +1,5 @@
 name: Paypay PHP Sample ecommerce backend CI
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
