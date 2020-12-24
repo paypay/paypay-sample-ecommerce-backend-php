@@ -1,4 +1,11 @@
 {
+    "config": {
+        "platform": {
+            "php": "7.4.8"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
     "require": {
         "paypayopa/php-sdk": "^0.9.0"
     },
