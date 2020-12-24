@@ -14,11 +14,10 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
 
-      - name: Run composer
-        run: composer install
-      
       - name: composer update
         run: composer update --lock
+      - name: Run composer
+        run: composer install      
 
       - name: Before script
         run: |
