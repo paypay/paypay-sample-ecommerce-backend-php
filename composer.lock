@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "atoum/atoum",
-            "version": "3.4.2",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atoum/atoum.git",
-                "reference": "e90606b89e62c5c18c5d02596078edf55f35b3c3"
+                "reference": "56e9c55cab42086c2eb6bd30fcf1e242f9c51f52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atoum/atoum/zipball/e90606b89e62c5c18c5d02596078edf55f35b3c3",
-                "reference": "e90606b89e62c5c18c5d02596078edf55f35b3c3",
+                "url": "https://api.github.com/repos/atoum/atoum/zipball/56e9c55cab42086c2eb6bd30fcf1e242f9c51f52",
+                "reference": "56e9c55cab42086c2eb6bd30fcf1e242f9c51f52",
                 "shasum": ""
             },
             "require": {
@@ -25,7 +25,7 @@
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
-                "php": "^5.6.0 || ^7.0.0 <7.5.0"
+                "php": "^7.2 || ^8.0"
             },
             "replace": {
                 "mageekguy/atoum": "*"
@@ -44,7 +44,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.x-dev"
+                    "dev-master": "4.x-dev"
                 }
             },
             "autoload": {
@@ -89,9 +89,9 @@
             ],
             "support": {
                 "issues": "https://github.com/atoum/atoum/issues",
-                "source": "https://github.com/atoum/atoum/tree/3.4.2"
+                "source": "https://github.com/atoum/atoum/tree/4.0.0"
             },
-            "time": "2020-03-04T10:29:09+00:00"
+            "time": "2020-11-21T17:23:11+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -381,20 +381,20 @@
         },
         {
             "name": "paypayopa/php-sdk",
-            "version": "0.9.0",
+            "version": "0.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paypay/paypayopa-sdk-php.git",
-                "reference": "c5190490cd9e46f1b0b99b3beb54b432185a3e4f"
+                "reference": "eabdeadf85194f4867bdb68bd76ae71bcebe1e42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paypay/paypayopa-sdk-php/zipball/c5190490cd9e46f1b0b99b3beb54b432185a3e4f",
-                "reference": "c5190490cd9e46f1b0b99b3beb54b432185a3e4f",
+                "url": "https://api.github.com/repos/paypay/paypayopa-sdk-php/zipball/eabdeadf85194f4867bdb68bd76ae71bcebe1e42",
+                "reference": "eabdeadf85194f4867bdb68bd76ae71bcebe1e42",
                 "shasum": ""
             },
             "require": {
-                "atoum/atoum": "^3.4",
+                "atoum/atoum": "^3.4 || ^4.0",
                 "firebase/php-jwt": "^5.2",
                 "guzzlehttp/guzzle": "^6.0 || ^7.0",
                 "php": ">=7.0.0"
@@ -407,9 +407,16 @@
             },
             "type": "library",
             "autoload": {
+                "classmap": [
+                    "src/core/"
+                ],
                 "psr-4": {
-                    "PayPay\\OpenPaymentAPI\\": "src/"
-                }
+                    "PayPay\\OpenPaymentAPI\\": "src/",
+                    "PayPay\\OpenPaymentAPI\\Controller\\": "src/Controllers/"
+                },
+                "files": [
+                    "src/helpers/utility_hmac.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -432,9 +439,9 @@
             ],
             "support": {
                 "issues": "https://github.com/paypay/paypayopa-sdk-php/issues",
-                "source": "https://github.com/paypay/paypayopa-sdk-php/tree/0.9.0"
+                "source": "https://github.com/paypay/paypayopa-sdk-php/tree/0.9.2"
             },
-            "time": "2020-11-04T11:02:27+00:00"
+            "time": "2021-01-05T10:15:34+00:00"
         },
         {
             "name": "psr/http-client",
