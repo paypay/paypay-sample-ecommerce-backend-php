@@ -220,16 +220,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
                 "shasum": ""
             },
             "require": {
@@ -289,22 +289,22 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.1"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.2"
             },
-            "time": "2021-03-21T16:25:00+00:00"
+            "time": "2021-04-26T09:17:50+00:00"
         },
         {
             "name": "paypayopa/php-sdk",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paypay/paypayopa-sdk-php.git",
-                "reference": "19897d0e8ad3fd2214987d72208cbeec4b726a42"
+                "reference": "ed31b3e6d8db01b376f6949c22e479073df15666"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paypay/paypayopa-sdk-php/zipball/19897d0e8ad3fd2214987d72208cbeec4b726a42",
-                "reference": "19897d0e8ad3fd2214987d72208cbeec4b726a42",
+                "url": "https://api.github.com/repos/paypay/paypayopa-sdk-php/zipball/ed31b3e6d8db01b376f6949c22e479073df15666",
+                "reference": "ed31b3e6d8db01b376f6949c22e479073df15666",
                 "shasum": ""
             },
             "require": {
@@ -353,9 +353,9 @@
             ],
             "support": {
                 "issues": "https://github.com/paypay/paypayopa-sdk-php/issues",
-                "source": "https://github.com/paypay/paypayopa-sdk-php/tree/1.0.2"
+                "source": "https://github.com/paypay/paypayopa-sdk-php/tree/1.0.3"
             },
-            "time": "2021-04-19T06:27:30+00:00"
+            "time": "2021-04-26T09:58:44+00:00"
         },
         {
             "name": "psr/http-client",
